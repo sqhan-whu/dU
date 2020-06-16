@@ -1,3 +1,8 @@
+## Usage: for dU sites filter from Vanscan.vcf
+## Example: python filter_site2.py Total_IN_QEX1.vcf Total_IN_QEX2.vcf centromeres2.bed
+## Auther: Han Shaoqing
+## Date: 20200616
+
 from sys import argv
 
 def get_list(file_name,min_T_ratio,T_dev,r=False):
