@@ -39,7 +39,7 @@ def get_list(file_name,min_T_ratio,T_dev,r=False):
 							n +=1
 							out_list.append([line[0],line[1],line[3],line[4],inp_cov,inp_ref_cov,inp_alt_cov,inp_t,out_cov,oup_ref_cov,oup_alt_cov,oup_t,inp_t/(oup_t+0.0001)])
 							pos.append(str(line[0])+"\t"+str(line[1]))
-				
+	f1.close()			
 	return n,out_list,pos
 
 
@@ -64,6 +64,7 @@ def get_centro_list(file_name):
 		for line in f:
 			line = line.strip().split('\t')
 			centro_list.append(str(line[0])+"\t"+str(line[1])+"\t"+str(line[2]))
+	f.close()
 	return centro_list
 
 
