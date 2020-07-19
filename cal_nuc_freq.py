@@ -128,10 +128,10 @@ def calc_nuc_counts(pos_signal_bedtool, neg_signal_bedtool, fasta_filename,
                 nuc_counts[offset][nucs] += row.count
 
     # remove nucs that are not len region_size
-    for offset, counts in nuc_counts.items():
-        for nuc, count in counts.items():
-            if len(nuc) != region_size:
-                counts.pop(nuc)
+#    for offset, counts in nuc_counts.items():
+#        for nuc, count in counts.items():
+#            if len(nuc) != region_size:
+#                counts.pop(nuc)
 
     return total_sites, nuc_counts
 
