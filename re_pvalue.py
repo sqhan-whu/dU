@@ -36,3 +36,5 @@ with open(sys.argv[1]) as f:
 	for i in range(len(pvalue_1)):
 		if (pvalue_1[i] <0.05 and pvalue_2[i]<0.05):
 			print(str(k[i][0])+"\t"+str(k[i][1])+"\t"+str(pvalue_1[i])+"\t"+str(pvals_corrected1[i])+"\t"+str(pvalue_2[i])+"\t"+str(pvals_corrected2[i]))
+
+f.close()
