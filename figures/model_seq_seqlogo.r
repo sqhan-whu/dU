@@ -1,6 +1,4 @@
 ### seqlogo for model-seq 
-### date: 20200520 
-### auther: Han Shaoqing
 
 BiocManager::install("motifStack")
 suppressPackageStartupMessages(library(motifStack))
