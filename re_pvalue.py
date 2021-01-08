@@ -3,9 +3,7 @@ from statsmodels.stats.multitest import multipletests
 import numpy as np
 import pandas as pd
 import sys
-#pval = binom.sf(k=3, n=12, p=0.016)
-#reject, pvals_corrected, alphacSidak, alphacBonf = multipletests(pval,alpha=0.05,method="bonferroni",is_sorted=False)
-#print(pval,pvals_corrected)
+
 def calculate_p_value(ex_bg, ex_mut, in_bg, in_mut, p_bg=0.016):
 	pval = 1
 	if in_bg >= 10 and ex_bg >= 10 and ex_mut >= 0:
@@ -14,18 +12,6 @@ def calculate_p_value(ex_bg, ex_mut, in_bg, in_mut, p_bg=0.016):
 		pval = 1-binom.sf(k=ex_mut, n=ex_bg, p=p)
 	return pval
 
-#pvals = [0.005,0.006]
-#reject, pvals_corrected, alphacSidak, alphacBonf = multipletests(pvals,alpha=0.05,method="bonferroni",is_sorted=False)
-#print(calculate_p_value(185, 13, 111, 0, p_bg=0.016),pvals_corrected)
-
-#rawdata = pd.read_table(sys.argv[1])
-
-#rawdata = list(rawdata.as_matrix())
-#input_cov = list(rawdata.iloc[:,1])
-#input_alt = list(rawdata.iloc[:,2])
-
-#print(rawdata.iloc[:,1])
-#print(input_cov)
 
 with open(sys.argv[1]) as f:
 	pvalue_1 = []
