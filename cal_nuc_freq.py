@@ -17,9 +17,6 @@ from pyfaidx import Fasta, complement
 
 from common import load_coverage
 
-__author__ = 'Han Shaoqing'
-__contact__ = '502466541.com'
-
 
 bam_filename = sys.argv[1]
 fasta_filename = sys.argv[2]
